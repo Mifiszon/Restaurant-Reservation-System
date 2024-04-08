@@ -1,0 +1,138 @@
+body {
+    background-image: url(tlo.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    background-attachment: fixed; /* Optional: keeps the background fixed while scrolling */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+}
+
+
+nav {
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+nav a {
+    text-decoration: none;
+    color: #A38A00;
+    margin: 0 20px;
+    font-size: 30px;
+}
+
+
+.nav-tile {
+    font-family: 'Times New Roman', Times, serif;
+    border: 5px double #A38A00;
+    display: inline-block;
+    padding: 20px;
+    margin: 0 10px;
+    background-color: black;
+    color: white;
+    border-radius: 10px;
+    transition: background-color 0.3s ease-in-out;
+}
+
+.nav-tile:hover {
+    border: 5px double black;
+    background-color: #A38A00;
+    color: black;
+}
+
+h3 {
+    color: #D9BA8C;
+}
+
+p {
+    color: white;
+}
+
+header {
+    padding: 10px;
+    text-align: center;
+    width: 20%;
+    background-image: url(naglowek.jpg);
+    background-size: cover;
+    background-position: center;
+    border: 10px solid #28282B;
+    box-shadow: 0 0 10px rgb(247, 243, 243);
+    border-radius: 50%;
+    color: black;
+    font-family: 'Alex Brush', cursive;
+    font-size: 25px;
+}
+
+h1 {
+    margin-bottom: 40px; 
+    margin-top: 20px;
+}
+
+
+
+h5 {
+    margin-top: 40px; 
+    margin-bottom: 20px;
+    color: white;
+}
+
+
+a {
+    text-decoration: none; 
+    color: white; 
+}
+
+footer {
+    background-color: black;
+    width: 100%;
+    border-top: 2px solid #A38A00;
+    padding: 20px;
+    box-sizing: border-box;
+}
+
+.container {
+    display: flex;
+}
+
+.collumn {
+    flex:1;
+    padding: 0 10px;
+}
+
+.logo {
+    width: 50%;
+    height: 90%;
+}
+
+input[type=text] {
+    width: 100%;
+    padding: 20px 30px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #A38A00;
+    border-radius: 4px;
+    box-sizing: border-box;
+    background-color: black;
+    color: white;
+}
+
+input[type=submit], input[type=reset] {
+    width: 100%;
+    font-size: 25px;
+    background-color: #A38A00;
+    color: black;
+    padding: 14px 20px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+input[type=submit]:hover, input[type=reset]:hover {
+    background-color: #D9BA8C;
+}
+

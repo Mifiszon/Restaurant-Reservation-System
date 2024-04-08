@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link href="https://fonts.googleapis.com/css2?family=Alex+Brush&family=Sevillana&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="style.css">
+        <title>Czarna Perła - Exclusive Restaurant </title>
+        <style>
+            .main {
+                width: 100%;
+                margin-top: 20px;
+            }
+            
+            .img-cont {
+                position: relative;
+                border-top: 20px ridge #A38A00;
+                border-bottom: 20px ridge #A38A00;
+            }
+
+            .overlay {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                background-color: rgba(75, 70, 43, 0.5); 
+            }
+            
+            img {
+                display: block;
+                width: 100%;
+                height: auto;
+            }
+            
+            .text {
+                font-family: 'Times New Roman', Times, serif;
+                font-size: 20px;
+                line-height: 1.5;
+                max-width: 800px; 
+                margin: 100px auto 100px; 
+                padding: 0 20px;
+                border: 10px double #A38A00;
+                background-color: black;
+                border-radius: 10%;
+                text-align: center;
+            }
+
+        </style>
+    </head>
+    <body>
+
+        <header>
+            <h1> Czarna Perła </h1>
+            <h5> Exclusive Restaurant </h5>
+        </header>
+
+        <br><br> 
+
+        <nav>
+            <a href="index.html" class="nav-tile">Strona Główna</a>
+            <a href="index.html#menu" class="nav-tile">Menu</a>
+            <a href="about.php" class="nav-tile">O Nas</a>
+            <a href="sign.php" class="nav-tile">Stały Klient</a>
+            <a href="reservation.php" class="nav-tile">Rezerwacja Online</a>
+            <a href="state.php" class="nav-tile">Status Rezerwacji</a>
+        </nav>
+
+        <br>
+
+        <div class="main">
+
+            <div class="img-cont">
+                <div class="overlay"></div>
+                <img src="srodek.jpg" alt="Wnętrze" class="in">
+            </div>
+
+            <div class="text">
+                <p>
+                    Restauracja „Czarna Perła” dziś jest żywym obrazem,
+                    namalowanym przez Michała Ogibę. Zachwyca tu harmonijnie
+                    określona forma, w której skład na równi z wystrojem wnętrza
+                    wchodzą smak, zapach, kolor i dźwięk.
+                    <br> <br>
+                    To miejsce nie tylko zachęca do patrzenia na nie jak na dzieło
+                    sztuki ale dyskretnie prowokuje do uczestniczenia w spektaklu,
+                    który tworzy razem ze swoimi gośćmi.
+                </p>
+            </div>
+            <div class="text" id="menu">
+                <h3 style="font-size: 30px;">≿━━━━༺  MENU  ༻━━━━≾</h3>
+                <p>
+                    Co sprawia, że nasza oferta jest tak wyjątkowa? Menu ulega regularnym zmianom, 
+                    dostosowywanym do sezonów, dostępności świeżych składników i wyjątkowych 
+                    inspiracji naszych kucharzy. Tutaj każda wizyta jest kulinarzną podróżą, 
+                    gdzie nawet stałe elementy zyskują nowy smak i charakter, 
+                    a samo menu pozostaje wielką tajemnicą.
+                </p>
+            </div>
+        </div>
+
+        <footer>
+            <div class="container">
+                <div class="collumn">
+                    <img src="logo.png" alt="logo" class="logo">
+                </div>
+                <div class="collumn">
+                <h3>Kontakt</h3>
+                    <p> 
+                        Telefon: <a href="tel:+48600600600">+48 600 600 600</a> <br>
+                        E-mail: <a href="mailto:czarna.perla@perla.pl">czarna.perla@perla.pl</a>
+                    </p>
+                </div>
+                <div class="collumn">
+                    <h3>Lokalizacja</h3>
+                    <p>
+                        Rynek Główny 36 <br> 
+                        31-013 Kraków
+                    </p>
+                </div>
+                <div class="collumn">
+                    <h3>Godziny Otwarcia</h3>
+                    <p>
+                        Sobota - Niedziela 16.00 - 24.00 <br>
+                        Kuchnia otwarta do 23.00
+                    </p>
+                </div>
+            </div>
+        </footer>
+
+    </body>
+</html>
