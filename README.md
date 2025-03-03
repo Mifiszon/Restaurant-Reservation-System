@@ -31,37 +31,13 @@ Reservation Page
 Menu Page
 
 
-
-Installation
-
-Clone this repository:
-
-git clone https://github.com/your-repo/restaurant-reservation.git
-
-Navigate to the project directory:
-
-cd restaurant-reservation
-
-Import the database:
-
-Open phpMyAdmin
-
-Create a new database (e.g., restaurant_db)
-
-Import database.sql from the repository
-
-Configure the database connection in config.php:
+Configuration of the database connection in config.php:
 
 $servername = "localhost";
 $username = "root";
 $password = "";
 $dbname = "restaurant_db";
 
-Start a local server (using XAMPP or WAMP) and place the project files inside the htdocs folder.
-
-Open a browser and navigate to:
-
-http://localhost/restaurant-reservation/
 
 Technologies Used
 
@@ -75,4 +51,4 @@ Bootstrap – Responsive design
 
 Authors
 
-Your Name
+Michał Ogiba
