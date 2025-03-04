@@ -1,37 +1,32 @@
-Restaurant Reservation System
+# Restaurant Reservation System
 
-Overview
+## Overview
 
-This repository contains a Restaurant Reservation System developed in PHP. The system allows users to browse the restaurant menu, make reservations, and manage bookings through a user-friendly interface.
+This repository contains a **Restaurant Reservation System** developed in **PHP**. The system allows users to browse the restaurant menu, make reservations, and manage bookings through a user-friendly interface.
 
-Features
+## Features
 
-User Registration & Login – Secure authentication for customers.
+- **User Registration & Login** – Secure authentication for customers.
+- **Table Reservation** – Users can select a date, time, and table for their booking.
+- **Menu Browsing** – Customers can view the restaurant’s menu.
+- **Admin Panel** – Manage reservations, customers, and menu items.
+- **Email Notifications** – Confirmations for reservations.
+- **Responsive Design** – Works on desktops, tablets, and mobile devices.
 
-Table Reservation – Users can select a date, time, and table for their booking.
+## Screenshots
 
-Menu Browsing – Customers can view the restaurant’s menu.
+### Home Page  
+![Home Page](path/to/homepage.png)
 
-Admin Panel – Manage reservations, customers, and menu items.
+### Reservation Page  
+![Reservation Page](path/to/reservation.png)
 
-Email Notifications – Confirmations for reservations.
+### Menu Page  
+![Menu Page](path/to/menu.png)
 
-Responsive Design – Works on desktops, tablets, and mobile devices.
+## Database Configuration
 
-Screenshots
-
-Home Page
-
-
-
-Reservation Page
-
-
-
-Menu Page
-
-
-Configuration of the database connection in config.php:
+Modify `config.php` to match your database settings:
 
 $servername = "localhost";
 $username = "root";
@@ -39,7 +34,8 @@ $password = "";
 $dbname = "restaurant_db";
 
 
-Technologies Used
+
+##Technologies Used
 
 PHP – Backend logic
 
@@ -49,6 +45,6 @@ HTML, CSS, JavaScript – Frontend
 
 Bootstrap – Responsive design
 
-Authors
+##Authors
 
 Michał Ogiba
