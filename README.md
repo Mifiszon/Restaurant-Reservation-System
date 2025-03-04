@@ -16,13 +16,20 @@ This repository contains a **Restaurant Reservation System** developed in **PHP*
 ## Screenshots
 
 ### Home Page  
-![Home Page](path/to/homepage.png)
+![Home Page](home1.png)
+![Home Page](home2.png)
+
+### About Page  
+![About Page](about.png)
+
+### Client Page  
+![Client Page](client.png)
 
 ### Reservation Page  
-![Reservation Page](path/to/reservation.png)
+![Reservation Page](reservation.png)
 
-### Menu Page  
-![Menu Page](path/to/menu.png)
+### Find Reservation Page  
+![Find Page](findres.png)
 
 ## Database Configuration
 
