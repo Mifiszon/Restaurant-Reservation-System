@@ -35,7 +35,7 @@ $dbname = "restaurant_db";
 
 
 
-##Technologies Used
+## Technologies Used
 
 PHP – Backend logic
 
@@ -45,6 +45,6 @@ HTML, CSS, JavaScript – Frontend
 
 Bootstrap – Responsive design
 
-##Authors
+## Authors
 
 Michał Ogiba
