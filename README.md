@@ -20,7 +20,7 @@ This repository contains a **Restaurant Reservation System** developed in **PHP*
 ![Home Page](home2.png)
 
 ### About Page  
-![About Page](about.png)
+![About Page](abbout.png)
 
 ### Client Page  
 ![Client Page](client.png)
