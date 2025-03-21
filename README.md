@@ -35,7 +35,7 @@ This repository contains a **Restaurant Reservation System** developed in **PHP*
 
 ## Database Configuration
 
-Modify `config.php` to match your database settings:
+Modify `autoryzacja.php` to match your database settings:
 
 $servername = "localhost";
 $username = "root";
