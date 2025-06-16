@@ -56,4 +56,4 @@ Bootstrap – Responsive design
 
 ## Authors
 
-Michał Ogiba
+Michał Ogiba    2024
