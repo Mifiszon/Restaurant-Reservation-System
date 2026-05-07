@@ -1,59 +1,119 @@
-# Restaurant Reservation System
+# 🍽️ Restaurant Reservation System
 
-## Overview
+A full-stack web application for managing restaurant reservations, built in PHP with a MySQL relational database. The system handles the complete booking lifecycle — from customer registration to admin reporting.
 
-This repository contains a **Restaurant Reservation System** developed in **PHP**. The system allows users to browse the restaurant menu, make reservations, and manage bookings through a user-friendly interface.
+---
 
-## Features
+## 🗄️ Database Design
 
-- **User Registration & Login** – Secure authentication for customers.
-- **Table Reservation** – Users can select a date, time, and table for their booking.
-- **Menu Browsing** – Customers can view the restaurant’s menu.
-- **Admin Panel** – Manage reservations, customers, and menu items.
-- **Email Notifications** – Confirmations for reservations.
-- **Responsive Design** – Works on desktops, tablets, and mobile devices.
+The core of the project is a normalized relational MySQL database managing four interconnected entities:
 
-## Screenshots
+```
+customers                tables
+  └── id                   └── id
+  └── name                 └── number
+  └── email                └── capacity
+  └── password_hash        └── location
 
-### Home Page  
-![Home Page](home1.png)
+reservations                        menu_items
+  └── id                              └── id
+  └── customer_id (FK → customers)    └── name
+  └── table_id    (FK → tables)       └── category
+  └── date                            └── price
+  └── time                            └── description
+  └── guests
+  └── status (pending/confirmed/cancelled)
+  └── created_at
+```
 
-**Footer**
-![Home Page](home2.png)
+### Key queries
 
-### About Page  
-![About Page](abbout.png)
+```sql
+-- Availability check: find free tables for a given date/time/party size
+SELECT t.id, t.number, t.capacity
+FROM tables t
+WHERE t.capacity >= :guests
+  AND t.id NOT IN (
+    SELECT table_id FROM reservations
+    WHERE date = :date
+      AND time BETWEEN :time AND ADDTIME(:time, '02:00:00')
+      AND status != 'cancelled'
+  );
 
-### Client Page  
-![Client Page](client.png)
+-- Admin report: reservations per day (last 30 days)
+SELECT DATE(created_at) AS day, COUNT(*) AS total,
+       SUM(guests) AS total_guests
+FROM reservations
+WHERE created_at >= CURDATE() - INTERVAL 30 DAY
+GROUP BY DATE(created_at)
+ORDER BY day;
+```
 
-### Reservation Page  
-![Reservation Page](reservation.png)
+---
 
-### Find Reservation Page  
-![Find Page](findres.png)
+## 🧩 Features
 
-## Database Configuration
+- **User auth** — registration and login with hashed passwords
+- **Table reservation** — date, time, party size selection with real-time availability check
+- **Conflict prevention** — SQL logic blocks double-booking of the same table/timeslot
+- **Menu browsing** — full menu with categories and pricing
+- **Admin panel** — manage reservations, customers, tables, and menu items
+- **Reservation lookup** — customers can find and cancel their bookings
+- **Email confirmations** — automated notifications on booking and cancellation
+- **Responsive design** — works on desktop, tablet, and mobile
 
-Modify `autoryzacja.php` to match your database settings:
+---
 
+## 📸 Screenshots
+
+| Home | Reservation | Admin |
+|------|------------|-------|
+| ![Home](home1.png) | ![Reservation](reservation.png) | ![Client](client.png) |
+
+---
+
+## 🛠️ Tech Stack
+
+| Layer | Technology |
+|---|---|
+| Backend | PHP 8 |
+| Database | MySQL (normalized, relational schema) |
+| Frontend | HTML, CSS, JavaScript |
+| Styling | Bootstrap 5 |
+| Auth | Session-based + password hashing |
+
+---
+
+## ⚙️ Local Setup
+
+1. Import `restaurant_db.sql` into MySQL
+2. Configure database connection in `autoryzacja.php`:
+
+```php
 $servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "restaurant_db";
+$username   = "root";
+$password   = "";
+$dbname     = "restaurant_db";
+```
 
+3. Start a local PHP server:
 
+```bash
+php -S localhost:8000
+```
 
-## Technologies Used
+---
 
-PHP – Backend logic
+## 🔭 Future Development
 
-MySQL – Database
+- **Analytics dashboard** — reservation trends, peak hours, table utilization rate
+- **pandas export** — downloadable CSV/Excel reports for reservation history
+- **Online payments** — Stripe integration for booking deposits
+- **REST API** — decouple frontend and enable mobile app support
 
-HTML, CSS, JavaScript – Frontend
+---
 
-Bootstrap – Responsive design
+## 👨‍💻 Author
 
-## Authors
-
-Michał Ogiba    2024
+**Michał Ogiba** — Jagiellonian University, 2024  
+[linkedin.com/in/michalogiba](https://linkedin.com/in/michalogiba) · [github.com/Mifiszon](https://github.com/Mifiszon)
