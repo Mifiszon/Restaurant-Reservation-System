@@ -1,4 +1,4 @@
-# 🍽️ Restaurant Reservation System
+# Restaurant Reservation System
 
 A full-stack web application for managing restaurant reservations, built in PHP with a MySQL relational database. The system handles the complete booking lifecycle — from customer registration to admin reporting.
 
