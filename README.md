@@ -26,29 +26,6 @@ reservations                        menu_items
   └── created_at
 ```
 
-### Key queries
-
-```sql
--- Availability check: find free tables for a given date/time/party size
-SELECT t.id, t.number, t.capacity
-FROM tables t
-WHERE t.capacity >= :guests
-  AND t.id NOT IN (
-    SELECT table_id FROM reservations
-    WHERE date = :date
-      AND time BETWEEN :time AND ADDTIME(:time, '02:00:00')
-      AND status != 'cancelled'
-  );
-
--- Admin report: reservations per day (last 30 days)
-SELECT DATE(created_at) AS day, COUNT(*) AS total,
-       SUM(guests) AS total_guests
-FROM reservations
-WHERE created_at >= CURDATE() - INTERVAL 30 DAY
-GROUP BY DATE(created_at)
-ORDER BY day;
-```
-
 ---
 
 ## 🧩 Features
