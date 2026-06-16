@@ -15,12 +15,12 @@ customers                tables
   └── email                └── capacity
   └── password_hash        └── location
 
-reservations                        menu_items
-  └── id                              └── id
-  └── customer_id (FK → customers)    └── name
-  └── table_id    (FK → tables)       └── category
-  └── date                            └── price
-  └── time                            └── description
+reservations                     
+  └── id                            
+  └── customer_id (FK → customers)  
+  └── table_id    (FK → tables)      
+  └── date                            
+  └── time                           
   └── guests
   └── status (pending/confirmed/cancelled)
   └── created_at
